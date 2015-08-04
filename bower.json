@@ -1,0 +1,9 @@
+{
+  "name": "trello-web-clipper-chrome",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "~3.2.0",
+    "mocha": "~2.2.5"
+  }
+}

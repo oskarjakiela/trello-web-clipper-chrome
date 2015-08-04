@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "trello-web-clipper-chrome",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Trello Web Clipper",
+    "description": "The description of the application"
+  }
+}
