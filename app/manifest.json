@@ -2,7 +2,8 @@
   "version": "0.0.1",
   "name": "trello-web-clipper-chrome",
   "manifest_version": 2,
-  "description": "__MSG_appDescription__",
+  "description": "Clip web pages directly to Trello",
+  "author": "Oskar Jakieła <oskar@jakiela.pl>",
   "icons": {
     "16": "images/trello-16.png",
     "128": "images/trello-128.png"
