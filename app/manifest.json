@@ -4,8 +4,8 @@
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
-    "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
+    "16": "images/trello-16.png",
+    "128": "images/trello-128.png"
   },
   "default_locale": "en",
   "background": {
@@ -15,8 +15,8 @@
   },
   "browser_action": {
     "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
+      "19": "images/trello-19.png",
+      "38": "images/trello-38.png"
     },
     "default_title": "Trello Web Clipper for Chrome",
     "default_popup": "popup.html"
