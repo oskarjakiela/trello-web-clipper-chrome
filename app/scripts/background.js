@@ -14,7 +14,7 @@ chrome.storage.sync.get(null, function(items) {
   }
 
   if (isUndefined(items['desc.template'])) {
-    items['desc.template'] = '[{{ title }}]({{ url }})\n\nvia Trello Web Clipper';
+    items['desc.template'] = '[{{ title }}]({{ url }})\n\nvia [Trello Web Clipper](https://chrome.google.com/webstore/detail/trello-web-clipper-chrome/bgldhlkimfdidhgmndninednbehpcenk)';
   }
 
   chrome.storage.sync.set(items);
