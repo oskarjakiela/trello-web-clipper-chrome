@@ -1,7 +1,7 @@
 {
   "name": "trello-web-clipper-chrome",
   "short_name": "Trello Web Clipper for Chrome",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "manifest_version": 2,
   "description": "Clip web pages directly to Trello",
   "author": "Oskar Jakieła <oskar@jakiela.pl>",
