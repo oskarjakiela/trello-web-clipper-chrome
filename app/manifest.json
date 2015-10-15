@@ -3,7 +3,7 @@
   "short_name": "Web Clipper for Trello",
   "version": "0.2.5",
   "manifest_version": 2,
-  "description": "Clip web pages directly to the Trello",
+  "description": "Clip web pages directly to Trello",
   "author": "Oskar Jakieła <oskar@jakiela.pl>",
   "icons": {
     "16": "images/trello-16.png",
