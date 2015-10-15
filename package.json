@@ -1,6 +1,6 @@
 {
-  "name": "trello-web-clipper-chrome",
   "version": "0.2.4",
+  "name": "trello-web-clipper",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",

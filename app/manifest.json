@@ -1,9 +1,9 @@
 {
-  "name": "trello-web-clipper-chrome",
-  "short_name": "Trello Web Clipper for Chrome",
+  "name": "Web Clipper for Trello",
+  "short_name": "Web Clipper for Trello",
   "version": "0.2.4",
   "manifest_version": 2,
-  "description": "Clip web pages directly to Trello",
+  "description": "Clip web pages directly to the Trello",
   "author": "Oskar Jakieła <oskar@jakiela.pl>",
   "icons": {
     "16": "images/trello-16.png",
@@ -20,7 +20,7 @@
       "19": "images/trello-19.png",
       "38": "images/trello-38.png"
     },
-    "default_title": "Trello Web Clipper for Chrome",
+    "default_title": "Web Clipper for Trello",
     "default_popup": "popup.html"
   },
   "content_scripts": [
