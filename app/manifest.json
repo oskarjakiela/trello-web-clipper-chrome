@@ -5,6 +5,7 @@
   "manifest_version": 2,
   "description": "Clip web pages directly to Trello",
   "author": "Oskar Jakieła <oskar@jakiela.pl>",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "icons": {
     "16": "images/trello-16.png",
     "128": "images/trello-128.png"

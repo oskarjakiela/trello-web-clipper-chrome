@@ -8,18 +8,6 @@ var isUndefined = function isUndefined(value) {
   return typeof value === 'undefined';
 };
 
-chrome.storage.sync.get(null, function(items) {
-  if (isUndefined(items.key)) {
-    items.key = 'e8b6ba838382302e68e9ad90a139bc7a';
-  }
-
-  if (isUndefined(items['desc.template'])) {
-    items['desc.template'] = '[{{ title }}]({{ url }})\n\nvia [Web Clipper for Trello](https://chrome.google.com/webstore/detail/trello-web-clipper-chrome/bgldhlkimfdidhgmndninednbehpcenk)';
-  }
-
-  chrome.storage.sync.set(items);
-});
-
 chrome.extension.onConnect.addListener(function(port) {
   port.onMessage.addListener(function(request) {
     var sendResponse = function sendResponse(data) {
@@ -30,7 +18,6 @@ chrome.extension.onConnect.addListener(function(port) {
     };
 
     switch(request.id) {
-      case '$addon:options':
       case '$addon:storage':
         var keys = request.data;
         if (isObject(keys)) {
