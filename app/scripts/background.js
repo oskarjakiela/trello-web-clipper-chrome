@@ -4,29 +4,36 @@ var isObject = function isObject(value) {
   return value === Object(value);
 };
 
+var isString = function isString(value) {
+  return typeof value === 'string';
+};
+
 var isUndefined = function isUndefined(value) {
   return typeof value === 'undefined';
 };
 
 chrome.extension.onConnect.addListener(function(port) {
   port.onMessage.addListener(function(request) {
-    var sendResponse = function sendResponse(data) {
+    function sendResponse(data) {
       port.postMessage({
         id: request.id,
         data: data
       });
-    };
+    }
 
     switch(request.id) {
       case '$addon:storage':
         var keys = request.data;
-        if (isObject(keys)) {
-          chrome.storage.sync.set(keys, sendResponse);
-        } else {
-          keys = isUndefined(keys) ? null : keys;
 
-          chrome.storage.sync.get(keys, sendResponse);
+        if (isObject(keys)) {
+          chrome.storage.sync.set(keys);
         }
+
+        if (isUndefined(keys)) {
+          keys = null;
+        }
+
+        chrome.storage.sync.get(keys, sendResponse);
         break;
       case '$addon:manifest':
         var manifest = chrome.runtime.getManifest();
@@ -57,13 +64,16 @@ chrome.extension.onConnect.addListener(function(port) {
         }, sendResponse);
         break;
       case '$addon:token':
-        if (isObject(request.data)) {
+        if (isString(request.data)) {
           chrome.storage.sync.set({
-            token: request.data.token
-          }, sendResponse);
-        } else {
-          chrome.storage.sync.get('token', sendResponse);
+            token: request.data
+          });
         }
+
+        chrome.storage.sync.get('token', function (items) {
+          sendResponse(items.token);
+        });
+
         break;
     }
   });

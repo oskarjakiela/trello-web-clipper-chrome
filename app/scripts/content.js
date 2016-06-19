@@ -1,9 +1,7 @@
 (function() {
   'use strict';
 
-  var port = chrome.extension.connect({
-    name: 'trello-web-clipper'
-  });
+  var port = chrome.extension.connect({ name: 'trello-web-clipper' });
 
   var messageId = '$addon:token';
   var regex = /[0-9a-f]{64}/;
@@ -18,8 +16,5 @@
     }
   });
 
-  port.postMessage({
-    id: messageId,
-    data: { token: token }
-  });
+  port.postMessage({ id: messageId, data: token });
 }());
